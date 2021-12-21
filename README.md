@@ -23,6 +23,6 @@ Earth data.
 ### 📝 Step 3️⃣ Plane Generation
 
 
-### 🔮 Step 4️⃣: Height Visualisation
+### 📝 Step 4️⃣: Height Visualisation
 
 
