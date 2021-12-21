@@ -13,5 +13,16 @@ Earth data.
 ![This is an image](http://fdh.epfl.ch/images/3/38/Venice_whole.png)
 
 
-## Pipeline
+## 📋 Pipeline
+
+### 📝 Step 1️⃣: Images Aquisition
+
+### 📝 Step 2️⃣: Point Cloud Optimization
+
+
+### 📝 Step 3️⃣ Plane Generation
+
+
+### 🔮 Step 4️⃣: Height Visualisation
+
 
