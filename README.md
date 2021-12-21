@@ -17,12 +17,12 @@ Earth data.
 
 ### 📝 Model Construction
 
-### 📝 Step 1️⃣: point cloud downsampling
+### 📝 Step 1️⃣: Point-cloud Downsampling
 
-### 📝 Step 2️⃣: point cloud denoise
+### 📝 Step 2️⃣: Point-cloud Denoise
 
 
-### 📝 Step 3️⃣: point cloud redressing and scaling 
+### 📝 Step 3️⃣: Point-cloud Redressing and Scaling 
 
 ### 📝 Height Visualization
 
