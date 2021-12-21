@@ -1,4 +1,4 @@
-# Venice-2020 Detection of building heights
+# 🏭 Venice-2020 Detection of building heights
 Please clone this repository using ```git clone --xxxxxxxxxxxxxxx``` to properly initalize
 
 This repository is a pipeline to detect heights of different buildings in Venice from Google Earth View.
