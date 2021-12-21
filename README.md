@@ -15,7 +15,7 @@ Earth data.
 
 ## 📋 Pipeline
 
-### 📝 Model Construction
+### 🖩 Model Construction
 
 ### 📝 Step 1️⃣: Point-cloud Downsampling
 
@@ -24,7 +24,7 @@ Earth data.
 
 ### 📝 Step 3️⃣: Point-cloud Redressing and Scaling 
 
-### 📝 Height Visualization
+### 🗺️ Height Visualization
 
 
 ### 📝 Step 1️⃣: Model Construction
