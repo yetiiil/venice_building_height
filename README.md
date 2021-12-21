@@ -27,9 +27,9 @@ Earth data.
 ### 📝 Height Visualization
 
 
-### 📝 Step 1️⃣: 
+### 📝 Step 1️⃣: Model Construction
 
-### 📝 Step 2️⃣: 
+### 📝 Step 2️⃣: Map Construction
 
 ## 📋 Results
 
