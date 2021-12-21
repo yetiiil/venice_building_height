@@ -27,5 +27,11 @@ Earth data.
 
 ### 📝 Step 5️⃣: Cadaster Alignment
 
+### 📝 Step 6️⃣: Quality Assessment
+
+## 📋 Results
+
+
+
 
 
