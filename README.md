@@ -38,6 +38,6 @@ Our initial plan was to download drone videos of Venice on the Youtube platform,
 
 
 
-## 🦸🏽‍♂️ Contributors
+## 👤 Contributors
 Yuhan Bi, Yuxiao Li, Sruti Bhattacharjee
 
