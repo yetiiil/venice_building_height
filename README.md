@@ -15,19 +15,21 @@ Earth data.
 
 ## 📋 Pipeline
 
-### 📝 Step 1️⃣: Images Aquisition
+### 📝 Model Construction
 
-### 📝 Step 2️⃣: Point Cloud Optimization
+### 📝 Step 1️⃣: point cloud downsampling
+
+### 📝 Step 2️⃣: point cloud denoise
 
 
-### 📝 Step 3️⃣ Plane Generation
+### 📝 Step 3️⃣: point cloud redressing and scaling 
+
+### 📝 Height Visualization
 
 
-### 📝 Step 4️⃣: Height Visualisation
+### 📝 Step 1️⃣: 
 
-### 📝 Step 5️⃣: Cadaster Alignment
-
-### 📝 Step 6️⃣: Quality Assessment
+### 📝 Step 2️⃣: 
 
 ## 📋 Results
 
