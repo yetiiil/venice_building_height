@@ -15,7 +15,7 @@ Earth data.
 
 ## 📋 Pipeline
 
-### 🖩 Model Construction
+### 🔮 Model Construction
 
 ### 📝 Step 1️⃣: Point-cloud Downsampling
 
