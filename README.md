@@ -43,7 +43,7 @@ After this, we calculate the relative height of the buildings based on the formu
 To visualise the height of the building, the first method is to change the colors of the points in the PointCloud model. For each point in the ‘PointCloud’, it has a ‘Colors' attribute. By calling this attribute, an (n, 3) array of value range [0, 1], containing RGB colors information of the points will be returned. Therefore, by normalising the ‘distances array’ values to the range of [0,1] and expanding the 'distances array' to three dimensions by replication, we get a (n, 3) ‘height array' in the form of (n, 3) 'colors array’.
 
 ### 📝 Step 2️⃣: Map Construction
-In this section, we transform the PointCloud coordinates information into a DataFrame, and plot the z-coordinate on a XoZ plane 2D map.
+In this step, we transform the PointCloud coordinates information into a DataFrame, and plot the z-coordinate on a X-Z plane 2D map.
 ## 🎉 Results
 
 ![This is an image](http://fdh.epfl.ch/images/4/47/Height_tab20c.png)
