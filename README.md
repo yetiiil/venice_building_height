@@ -31,10 +31,11 @@ Our initial plan was to download drone videos of Venice on the Youtube platform,
 
 
 ### 📝 Step 1️⃣: Model Construction
-To find the plane with the largest support in the point cloud, we used the method [Segment_Plane](http://www.open3d.org/docs/release/python_api/open3d.geometry.PointCloud.html#open3d.geometry.PointCloud.segment_plane) from [Open3D](http://www.open3d.org/). The function returns the plane as (𝑎,𝑏,𝑐,𝑑) where for each point (𝑥,𝑦,𝑧) on the plane we have 𝑎𝑥+𝑏𝑦+𝑐𝑧+𝑑=0. The function further returns a list of indices of the inlier points. From [Open3D](http://www.open3d.org/) using the attribute [Points](http://www.open3d.org/docs/release/python_api/open3d.geometry.PointCloud.html#open3d.geometry.PointCloud.points) we get coordinate information of each points. After this, we calculate the relative height of the buildings based on the formula of point-to-plane distance. 
+To find the plane with the largest support in the point cloud, we used the method [Segment_Plane](http://www.open3d.org/docs/release/python_api/open3d.geometry.PointCloud.html#open3d.geometry.PointCloud.segment_plane) from [Open3D](http://www.open3d.org/). The function returns the plane as (𝑎,𝑏,𝑐,𝑑) where for each point (𝑥,𝑦,𝑧) on the plane we have 𝑎𝑥+𝑏𝑦+𝑐𝑧+𝑑=0. The function further returns a list of indices of the inlier points. From [Open3D](http://www.open3d.org/) using the attribute [Points](http://www.open3d.org/docs/release/python_api/open3d.geometry.PointCloud.html#open3d.geometry.PointCloud.points) we get coordinate information of each points. After this, we calculate the relative height of the buildings based on the formula of point-to-plane distance. Since we already have the plane equation, using this formula, we could obtain the distances between each point and the plane and save them in a (n, 1) array. 
 
 
 ### 📝 Step 2️⃣: Map Construction
+
 
 ## 🎉 Results
 
