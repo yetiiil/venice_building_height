@@ -50,6 +50,9 @@ To visualise the height of the building, the first method is to change the color
 ### 📝 Step 2️⃣: Map Construction
 In this section, we transform the PointCloud coordinates information into a DataFrame, and plot the z-coordinate on a XoZ plane 2D map.
 
+![This is an image](http://fdh.epfl.ch/images/6/66/Assess2.jpg)
+
+
 ## 🎉 Results
 
 ![This is an image](http://fdh.epfl.ch/images/4/47/Height_tab20c.png)
