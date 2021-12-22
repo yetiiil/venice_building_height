@@ -22,7 +22,7 @@ Our initial plan was to download drone videos of Venice on the YouTube platform,
 At the first step, we preprocess Point-Cloud by downsampling. To achieve this, we have used voxel grids to create a uniformly downsampled Point-Cloud from an input Point-Cloud. First, points are bucketed into voxels. Then, each occupied voxel generates exactly one point by averaging all points inside. 
 
 ### 📝 Step 2️⃣: Point-Cloud Denoising
-To denoise Point-Clouds, we have used the method statistical_outlier_removal and Radius oulier removal. The first function removes points that are further away from their neighbors compared to the average for the Point-Cloud, the second function removes points that have few neighbors in a given sphere around them.
+To denoise Point-Clouds, we have used the method statistical_outlier_removal, which removes points that are further away from their neighbors compared to the average for the Point-Cloud.
 
 ### 📝 Step 3️⃣: Point-Cloud Redressing and Scaling 
 We first rotate the Point-Cloud so that the plane in the PointCloud is XoY plane
