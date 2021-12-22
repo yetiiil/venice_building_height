@@ -19,20 +19,18 @@ Our initial plan was to download drone videos of Venice on the YouTube platform,
 
 ### 🔮 Model Construction
 
-### 📝 Step 1️⃣: Point-cloud Downsampling
-At the first step, we preprocess Point-Cloud by downsampling. For this, we have used voxel grids to create a uniformly downsampled point cloud from an input point cloud. For this first, points are bucketed into voxels. Then use each occupied voxel to generate one point by averaging all points inside. 
+### 📝 Step 1️⃣: Point-Cloud Downsampling
+At the first step, we preprocess Point-Cloud by downsampling. To achieve this, we have used voxel grids to create a uniformly downsampled Point-Cloud from an input Point-Cloud. First, points are bucketed into voxels. Then, each occupied voxel generates exactly one point by averaging all points inside. 
 
-### 📝 Step 2️⃣: Point-cloud Denoising
-To denoise point clouds, we have used the method statistical_outlier_removal. It removes points that are further away from their neighbors compared to the average for the point cloud. The lower the value the more aggressive the filter is.
+### 📝 Step 2️⃣: Point-Cloud Denoising
+To denoise Point-Clouds, we have used the method statistical_outlier_removal and Radius oulier removal. The first function removes points that are further away from their neighbors compared to the average for the Point-Cloud, the second function removes points that have few neighbors in a given sphere around them.
 
-### 📝 Step 3️⃣: Point-cloud Redressing and Scaling 
+### 📝 Step 3️⃣: Point-Cloud Redressing and Scaling 
+We first rotate the Point-Cloud so that the plane in the PointCloud is XoY plane
+Then we scale the Point-Cloud so that the height in the model would match the height in real world
+In the end, we translate the Point-Cloud so that the plane equation could be Z=0
+
 Please note that here we need to do an iteration so that we could get a more precise model
-
-We first rotate the PointCloud so that the plane in the PointCloud is XoY plane
-Then we scale the PointCloud so that the height in the model would match the height in real world
-In the end, we translate the PointCloud so that the plane equation could be Z=0
-
-
 ### 🗺️ Height Visualization
 
 
