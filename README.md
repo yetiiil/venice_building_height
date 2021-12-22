@@ -31,7 +31,15 @@ For Point cloud Downsampling we have used voxel grids to create a uniformly down
 
 
 ### 📝 Step 1️⃣: Model Construction
-To find the plane with the largest support in the point cloud, we used the method [Segment_Plane](http://www.open3d.org/docs/release/python_api/open3d.geometry.PointCloud.html#open3d.geometry.PointCloud.segment_plane) from [Open3D](http://www.open3d.org/). The function returns the plane as (𝑎,𝑏,𝑐,𝑑) where for each point (𝑥,𝑦,𝑧) on the plane we have 𝑎𝑥+𝑏𝑦+𝑐𝑧+𝑑=0. The function further returns a list of indices of the inlier points. From [Open3D](http://www.open3d.org/) using the attribute Points, we get coordinate information of each points. After this, we calculate the relative height of the buildings based on the formula of point-to-plane distance. Once the plane equation is obtained, we could calculate the distances between each point and the plane and save them in a (n, 1) array. 
+To find the plane with the largest support in the point cloud, we used the method [Segment_Plane](http://www.open3d.org/docs/release/python_api/open3d.geometry.PointCloud.html#open3d.geometry.PointCloud.segment_plane) from [Open3D](http://www.open3d.org/). The function returns the plane as (𝑎,𝑏,𝑐,𝑑) where for each point (𝑥,𝑦,𝑧) on the plane we have 𝑎𝑥+𝑏𝑦+𝑐𝑧+𝑑=0. The function further returns a list of indices of the inlier points. From [Open3D](http://www.open3d.org/) using the attribute Points, we get coordinate information of each points. 
+
+Statistical_outlier_removal removes points that are further away from their neighbors compared to the average for the point cloud. It takes two input parameters:
+
+nb_neighbors, which specifies how many neighbors are taken into account in order to calculate the average distance for a given point.
+
+std_ratio, which allows setting the threshold level based on the standard deviation of the average distances across the point cloud. The lower this number the more aggressive the filter will be.
+
+After this, we calculate the relative height of the buildings based on the formula of point-to-plane distance. Once the plane equation is obtained, we could calculate the distances between each point and the plane and save them in a (n, 1) array. 
 
 To visualise the height of the building, the first method is to change the colors of the points in the PointCloud model. For each point in the ‘PointCloud’, it has a ‘Colors' attribute. By calling this attribute, an (n, 3) array of value range [0, 1], containing RGB colors information of the points will be returned. Therefore, by normalising the ‘distances array’ values to the range of [0,1] and expanding the 'distances array' to three dimensions by replication, we get a (n, 3) ‘height array' in the form of (n, 3) 'colors array’.
 
