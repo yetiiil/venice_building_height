@@ -20,7 +20,7 @@ Our initial plan was to download drone videos of Venice on the Youtube platform,
 ### 🔮 Model Construction
 
 ### 📝 Step 1️⃣: Point-cloud Downsampling
-For Point cloud Downsampling we have used voxel grids to create a uniformly downsampled point cloud from an input point cloud. For this first, points are bucketed into voxels. Then use each occupied voxel to generate one point by averaging all points inside. 
+At the first step, we preprocess key point generation by Point-cloud Downsampling. For this, we have used voxel grids to create a uniformly downsampled point cloud from an input point cloud. For this first, points are bucketed into voxels. Then use each occupied voxel to generate one point by averaging all points inside. 
 
 ### 📝 Step 2️⃣: Point-cloud Denoise
 At first, reconstruction uncertainty selection procedures were followed two times to reduce the reconstruction uncertainty toward 10 without having to delete more than 50 percent of the tie points each time. Next, we applied the projection accuracy selection procedure
