@@ -1,8 +1,8 @@
 # 🏭 Venice-2020 Detection of building heights
 Please clone this repository using ```git clone --xxxxxxxxxxxxxxx``` to properly initalize
 
-This repository is a pipeline to detect heights of different buildings in Venice from Google Earth View and drone videos from Youtube.
-This pipeline is implemented during course  Foundation of Digital Humanities (DH-405) given in fall 2021 at EPFL.
+This repository is a pipeline to detect heights of different buildings in Venice from Google Earth View and drone videos from YouTube.
+This pipeline is implemented during course Foundation of Digital Humanities (DH-405) given in fall 2021 at EPFL.
 For details please go through our [wiki page](http://fdh.epfl.ch/index.php/Venice2020_Building_Heights_Detection).
 Please find the details on how to run the pipeline below:
 
@@ -15,16 +15,14 @@ Earth data.
 
 ## 📋 Pipeline
 
-Our initial plan was to download drone videos of Venice on the Youtube platform, used FFmpeg to extract images from the video one frame per second, and generate dense point cloud models based on the images that we acquired. However, the videos we could get from drone videos are very limited. Hence in order to access building data all over the Venice, we decided to use Google Earth images. Following  photogrammetry route from Google Earth images of whole Venice were collected in order to generate point cloud models.
+Our initial plan was to download drone videos of Venice on the YouTube platform, used FFmpeg to extract images from the video one frame per second, and generate dense point cloud models based on the images that we obtained. However, the videos we could get from drone videos are very limited. Hence in order to access building data all over the Venice, we decided to use Google Earth images. Following  photogrammetry route from Google Earth images of whole Venice were collected in order to generate point cloud models.
 
 ### 🔮 Model Construction
 
 ### 📝 Step 1️⃣: Point-cloud Downsampling
-At the first step, we preprocess key point generation by Point-cloud Downsampling. For this, we have used voxel grids to create a uniformly downsampled point cloud from an input point cloud. For this first, points are bucketed into voxels. Then use each occupied voxel to generate one point by averaging all points inside. 
+At the first step, we preprocess Point-Cloud by downsampling. For this, we have used voxel grids to create a uniformly downsampled point cloud from an input point cloud. For this first, points are bucketed into voxels. Then use each occupied voxel to generate one point by averaging all points inside. 
 
 ### 📝 Step 2️⃣: Point-cloud Denoising
-In order to protect the actual intended data and remove noises only, we did the denoising in three steps. At first, reconstruction uncertainty selection procedures were followed two times to reduce the reconstruction uncertainty toward 10 without having to delete more than 50 percent of the tie points each time. Next, we applied the projection accuracy selection procedure. This was repeated without having to delete more than 50% of the points each time until level 2 is reached and there are few points selected. Finally, we measure the error between a 3D point's original location on the image and the location of the point when it is projected back to each image used to estimate its position. Error-values are normalized based on key point size.  This we call Reprojection Error which can be reduced by iteratively selecting and deleting points, then optimizing until the unweighted RMS reprojection error is between 0.13 and 0.18 which means that there is 95% confidence that the remaining points meet the estimated error.
-
 To denoise point clouds, we have used the method statistical_outlier_removal. It removes points that are further away from their neighbors compared to the average for the point cloud. The lower the value the more aggressive the filter is.
 
 ### 📝 Step 3️⃣: Point-cloud Redressing and Scaling 
