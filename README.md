@@ -50,6 +50,7 @@ In this section, we transform the PointCloud coordinates information into a Data
 
 ## 🎉 Results
 
+![This is an image](http://fdh.epfl.ch/images/4/47/Height_tab20c.png)
 
 
 ## 👤 Contributors
