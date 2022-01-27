@@ -1,5 +1,4 @@
 # 🏭 Venice-2020 Detection of building heights
-Please clone this repository using ```git clone --xxxxxxxxxxxxxxx``` to properly initalize
 
 This repository is a pipeline to detect heights of different buildings in Venice from Google Earth View and drone videos from YouTube.
 This pipeline is implemented during course Foundation of Digital Humanities (DH-405) given in fall 2021 at EPFL.
